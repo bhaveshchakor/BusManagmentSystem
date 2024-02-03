@@ -15,7 +15,7 @@ export class AdminloginComponent {
   adminDetObj= {} as Employeedetails
   loginData(username:any, password:any)
   {
-    if (username=="a" && password=="a")
+    if (username.toUpperCase()=="A" && password.toUpperCase()=="A")
     {
       this.isValidUser=1;
     }
