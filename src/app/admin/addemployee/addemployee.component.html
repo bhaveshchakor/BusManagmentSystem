@@ -1,0 +1,55 @@
+<hr>
+<br>
+<div style="text-align: left; width: 1000px">
+  <fieldset>
+    <legend>Add Employee Details</legend>
+    <table>
+      <tr>
+        <td style="width:30%;">
+          ID Number:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter employee Id" [(ngModel)]="this.empDetailobj.id" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Name:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter employee name" [(ngModel)]="this.empDetailobj.name" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Designation:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter employee designation" [(ngModel)]="this.empDetailobj.designation" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Mobile Number:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter mobile number" [(ngModel)]="this.empDetailobj.mobno" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Address:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter permanant address" [(ngModel)]="this.empDetailobj.address" />
+        </td>
+      </tr>
+      <br>
+    </table>
+    <button (click)="submitDet()">Submit</button>
+  </fieldset>
+</div>

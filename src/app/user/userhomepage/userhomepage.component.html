@@ -1,0 +1,7 @@
+<h1 align="center" *ngIf="showCompPage==0">Home Page</h1>
+
+<button (click)="showComp(1)" >Track Bus</button>
+
+<div *ngIf="showCompPage==1"><app-usertrackstatus></app-usertrackstatus></div>
+
+

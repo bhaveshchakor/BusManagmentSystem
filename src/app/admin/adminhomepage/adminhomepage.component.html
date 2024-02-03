@@ -1,0 +1,10 @@
+<h1 align="center" *ngIf="showThisHomepageComp==0" >Home Page</h1>
+<button [disabled]="showThisHomepageComp==1" (click)="showComp(1)">Add Bus</button>
+<button [disabled]="showThisHomepageComp==2" (click)="showComp(2)">Add Employee</button>
+<button [disabled]="showThisHomepageComp==3" (click)="showComp(3)">Track Status</button>
+<button [disabled]="showThisHomepageComp==4" (click)="showComp(4)">Show</button>
+
+<div *ngIf="showThisHomepageComp==1"><app-addbus></app-addbus></div>
+<div *ngIf="showThisHomepageComp==2"><app-addemployee></app-addemployee></div>
+<div *ngIf="showThisHomepageComp==3"><app-trackstatus></app-trackstatus></div>
+<div *ngIf="showThisHomepageComp==4"><app-show></app-show></div>

@@ -1,0 +1,56 @@
+<div *ngIf="isShowComp==0">
+<br>
+<div *ngFor="let data of service.busDetailArr" style="text-align: left; width: 1000px">
+  <fieldset *ngIf="data.number==this.service.updateBusNoVar">
+  <table >
+    <tr>
+      <td>
+        Bus No:
+      </td>
+      <td>
+        {{data.number}}
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        Departure Timing:
+      </td>
+      <td>
+        <input type="textbox" placeholder="enter bus timing" [(ngModel)]="updateBusDetailObj.departTime" />
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        Arrival Timing:
+      </td>
+      <td>
+        <input type="textbox" placeholder="enter bus timing" [(ngModel)]="updateBusDetailObj.arriveTime" />
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        Driver Name:
+      </td>
+      <td>
+        <input type="textbox" placeholder="enter driver name" [(ngModel)]="updateBusDetailObj.driver" />
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        Conductor Name:
+      </td>
+      <td>
+        <input type="textbox" placeholder="enter conductor name" [(ngModel)]="updateBusDetailObj.conductor" />
+      </td>
+    </tr>
+    <br>
+    <button (click)="updateBusInfo(data.number)">Update Info</button>
+  </table>
+</fieldset>
+</div>
+</div>
+<div *ngIf="isShowComp==1"> <app-show></app-show></div>

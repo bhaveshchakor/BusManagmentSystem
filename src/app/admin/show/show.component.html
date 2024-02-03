@@ -1,0 +1,40 @@
+<div *ngIf="tempShow==0">
+<table border="1" style="text-align: center;background-color: slategrey;">
+  <tr>
+    <th>Bus Number</th>
+    <th>Departure Time</th>
+    <th>Arrival Time</th>
+    <th>Driver</th>
+    <th>Conductor</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let data of service.busDetailArr">
+    <td>{{data.number}}</td>
+    <td>{{data.departTime}}</td>
+    <td>{{data.arriveTime}}</td>
+    <td>{{data.driver}}</td>
+    <td>{{data.conductor}}</td>
+    <button (click)="sendData(data.number)">Update</button>
+  </tr>
+</table>
+<br>
+<table border="1" style="text-align: center;background-color: slategrey;">
+  <tr>
+    <th>Emp Id Number</th>
+    <th>Emp Name</th>
+    <th>Designation</th>
+    <th>Mobile Number</th>
+    <th>Address</th>
+
+  </tr>
+  <tr *ngFor="let data of service.empDetailArr">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.designation}}</td>
+    <td>{{data.mobno}}</td>
+    <td>{{data.address}}</td>
+  </tr>
+</table>
+</div>
+<div *ngIf="tempShow==1"><app-update></app-update></div>
+

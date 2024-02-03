@@ -1,0 +1,29 @@
+<hr>
+<br>
+Enter Bus Number: <input type="text" #num><br><br>
+<button (click)="showStatus(num.value)">Show Status</button><br>
+<table border="1" *ngFor="let data of service.busDetailArr" style="text-align: center; background-color: slategrey;">
+  <div *ngIf="data.number==num.value">
+    <tr>
+      <th>Bus Number</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+      <th>Action</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>{{data.number}}</td>
+      <td>{{data.departTime}}</td>
+      <td>{{data.arriveTime}}</td>
+      <td>
+        <select (change)="changeStatus(data.number, $event)">
+          <option value='0'>--Select--</option>
+          <option value='1'>Yet to Depart</option>
+          <option value='2'>On Track</option>
+          <option value='3'>Cancelled</option>
+        </select>
+      </td>
+      <td>{{data.status}}</td>
+    </tr>
+  </div>
+</table>

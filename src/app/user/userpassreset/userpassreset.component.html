@@ -1,0 +1,45 @@
+<br><div style="text-align: left; width: 1000px">
+  <fieldset>
+    <legend>Password Reset</legend><br>
+    <table>
+      <tr>
+        <td style="width:30%;">
+          Email-id:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter email-id" [(ngModel)]="this.userDetObj.email"/>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Username:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter username" [(ngModel)]="this.userDetObj.username"/>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Old Password:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter old password"/>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          New Password:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter new password" [(ngModel)]="this.userDetObj.password"/>
+        </td>
+      </tr>
+      <br>
+    </table>
+
+    <button (click)="reset()">Reset</button>
+  </fieldset>
+</div>

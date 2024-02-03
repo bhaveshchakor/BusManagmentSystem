@@ -1,0 +1,31 @@
+<br>
+<div *ngIf="isValidUser==0" style="text-align: left; width: 1000px;color: white;width: 50%;">
+  <fieldset >
+    <legend >Admin Login</legend>
+  <table>
+      <tr>
+          <td>
+              Username:
+          </td>
+          <td>
+              <input type="textbox" placeholder="enter username" #username/>
+          </td>
+      </tr>
+      <br>
+      <tr>
+           <td>
+              Password
+          </td>
+          <td>
+              <input type="textbox" placeholder="enter password" #password/>
+          </td>
+      </tr>
+      <br>
+  </table>
+  <button (click)="loginData(username.value, password.value)">Login</button>
+  </fieldset>
+</div>
+
+<div *ngIf="isValidUser==1">
+  <app-adminhomepage></app-adminhomepage>
+</div>

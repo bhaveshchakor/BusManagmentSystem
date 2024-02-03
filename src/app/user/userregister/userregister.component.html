@@ -1,0 +1,45 @@
+<br>
+<div style="text-align: left; width: 1000px">
+  <fieldset>
+    <legend>User Details</legend>
+    <table>
+      <tr>
+        <td style="width:30%;">
+          Full Name:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter fullname" [(ngModel)]="this.userDetObj.fullname" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          User Name:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter user name" [(ngModel)]="this.userDetObj.username" />
+        </td>
+      </tr>
+      <br>
+       <tr>
+        <td>
+          Mobile Number:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter mobile number" [(ngModel)]="userDetObj.mobno" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Password:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter Password" [(ngModel)]="userDetObj.password" />
+        </td>
+      </tr>
+      <br>
+    </table>
+    <button (click)="register()">Sign-Up</button>
+  </fieldset>
+</div>

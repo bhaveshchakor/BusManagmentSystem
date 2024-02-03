@@ -1,0 +1,55 @@
+<hr>
+<br>
+<div style="text-align: left; width: 1000px">
+  <fieldset>
+    <legend>Add Bus Details</legend>
+    <table>
+      <tr>
+        <td style="width:30%;">
+          Bus Number:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter bus number" [(ngModel)]="busDetailObj.number" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Departure Timing:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter bus timing" [(ngModel)]="busDetailObj.departTime" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Arrival Timing:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter bus timing" [(ngModel)]="busDetailObj.arriveTime" />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Driver Name:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter driver name" [(ngModel)]="busDetailObj.driver"  />
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Conductor Name:
+        </td>
+        <td>
+          <input type="textbox" placeholder="enter conductor name" [(ngModel)]="busDetailObj.conductor"  />
+        </td>
+      </tr>
+      <br>
+    </table>
+    <button (click)="submitDet()">Submit</button>
+  </fieldset>
+</div>
